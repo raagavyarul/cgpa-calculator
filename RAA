@@ -1,0 +1,436 @@
+#include <stdio.h>
+#include <string.h>
+
+// Function declarations
+float sem_1();
+float sem_2();
+float sem_3();
+float sem_4();
+float sem_5();
+float sem_6();
+float sem_7();
+float sem_8();
+int gp(char g[]);
+
+int main() {
+    int sem;
+    float cgpa, gpa;
+
+    printf("Enter semester number: ");
+    scanf("%d", &sem);
+
+    switch (sem) {
+        case 1:
+            gpa = sem_1();
+            cgpa = gpa;
+            printf("\nCGPA: %.2f", cgpa);
+            break;
+        case 2:
+            cgpa = (sem_1() + sem_2()) / 2;
+            printf("\nCGPA: %.2f", cgpa);
+            break;
+        case 3:
+            cgpa = (sem_1() + sem_2() + sem_3()) / 3;
+            printf("\nCGPA: %.2f", cgpa);
+            break;
+        case 4:
+            cgpa = (sem_1() + sem_2() + sem_3() + sem_4()) / 4;
+            printf("\nCGPA: %.2f", cgpa);
+            break;
+        case 5:
+            cgpa = (sem_1() + sem_2() + sem_3() + sem_4() + sem_5()) / 5;
+            printf("\nCGPA: %.2f", cgpa);
+            break;
+        case 6:
+            cgpa = (sem_1() + sem_2() + sem_3() + sem_4() + sem_5() + sem_6()) / 6;
+            printf("\nCGPA: %.2f", cgpa);
+            break;
+        case 7:
+            cgpa = (sem_1() + sem_2() + sem_3() + sem_4() + sem_5() + sem_6() + sem_7()) / 7;
+            printf("\nCGPA: %.2f", cgpa);
+            break;
+        case 8:
+            cgpa = (sem_1() + sem_2() + sem_3() + sem_4() + sem_5() + sem_6() + sem_7() + sem_8()) / 8;
+            printf("\nCGPA: %.2f", cgpa);
+            break;
+        default:
+            printf("Invalid semester number.");
+            break;
+    }
+
+    return 0;
+}
+
+float sem_1() {
+    int totalgradepoints = 0, creditpoints = 0;
+    char grade[3];
+
+    printf("\nEnter the grade for Communicative English: ");
+    scanf("%s", grade);
+    totalgradepoints += 3 * gp(grade);
+    creditpoints += 3;
+
+    printf("\nEnter the grade for Matrices and Calculus: ");
+    scanf("%s", grade);
+    totalgradepoints += 4 * gp(grade);
+    creditpoints += 4;
+
+    printf("\nEnter the grade for Engineering Chemistry: ");
+    scanf("%s", grade);
+    totalgradepoints += 3 * gp(grade);
+    creditpoints += 3;
+
+    printf("\nEnter the grade for Engineering Physics: ");
+    scanf("%s", grade);
+    totalgradepoints += 3 * gp(grade);
+    creditpoints += 3;
+
+    printf("\nEnter the grade for Problem Solving and Python Programming: ");
+    scanf("%s", grade);
+    totalgradepoints += 3 * gp(grade);
+    creditpoints += 3;
+
+    printf("\nEnter the grade for Heritage of Tamils: ");
+    scanf("%s", grade);
+    totalgradepoints += 1 * gp(grade);
+    creditpoints += 1;
+
+    printf("\nEnter the grade for Communicative English Laboratory: ");
+    scanf("%s", grade);
+    totalgradepoints += 1 * gp(grade);
+    creditpoints += 1;
+
+    printf("\nEnter the grade for Physics and Chemistry Laboratory: ");
+    scanf("%s", grade);
+    totalgradepoints += 2 * gp(grade);
+    creditpoints += 2;
+
+    printf("\nEnter the grade for Problem Solving and Python Programming Laboratory: ");
+    scanf("%s", grade);
+    totalgradepoints += 2 * gp(grade);
+    creditpoints += 2;
+
+    float gpa = (float)totalgradepoints / creditpoints;
+    printf("\nGPA: %.2f", gpa);
+    return gpa;
+}
+
+float sem_2() {
+    int totalgradepoints = 0, creditpoints = 0;
+    char grade[3];
+
+    printf("\nEnter the grade for Technical English: ");
+    scanf("%s", grade);
+    totalgradepoints += 3 * gp(grade);
+    creditpoints += 3;
+
+    printf("\nEnter the grade for Statistics and Numerical Methods: ");
+    scanf("%s", grade);
+    totalgradepoints += 4 * gp(grade);
+    creditpoints += 4;
+
+    printf("\nEnter the grade for Physics for Computer Science Engineers: ");
+    scanf("%s", grade);
+    totalgradepoints += 3 * gp(grade);
+    creditpoints += 3;
+
+    printf("\nEnter the grade for Engineering Graphics: ");
+    scanf("%s", grade);
+    totalgradepoints += 4 * gp(grade);
+    creditpoints += 4;
+
+    printf("\nEnter the grade for Tamil Heritage: ");
+    scanf("%s", grade);
+    totalgradepoints += 1 * gp(grade);
+    creditpoints += 1;
+
+    printf("\nEnter the grade for Programming in C: ");
+    scanf("%s", grade);
+    totalgradepoints += 3 * gp(grade);
+    creditpoints += 3;
+
+    printf("\nEnter the grade for Technical English Laboratory: ");
+    scanf("%s", grade);
+    totalgradepoints += 1 * gp(grade);
+    creditpoints += 1;
+
+    printf("\nEnter the grade for Programming in C Laboratory: ");
+    scanf("%s", grade);
+    totalgradepoints += 2 * gp(grade);
+    creditpoints += 2;
+
+    printf("\nEnter the grade for Engineering Practices Laboratory: ");
+    scanf("%s", grade);
+    totalgradepoints += 2 * gp(grade);
+    creditpoints += 2;
+
+    float gpa = (float)totalgradepoints / creditpoints;
+    printf("\nGPA: %.2f", gpa);
+    return gpa;
+}
+
+float sem_3() {
+    int totalgradepoints = 0, creditpoints = 0;
+    char grade[3];
+
+    printf("\nEnter the grade for Digital Principles and Computer Organization: ");
+    scanf("%s", grade);
+    totalgradepoints += 4 * gp(grade);
+    creditpoints += 4;
+
+    printf("\nEnter the grade for Foundations of Data Science: ");
+    scanf("%s", grade);
+    totalgradepoints += 3 * gp(grade);
+    creditpoints += 3;
+
+    printf("\nEnter the grade for Data Structure: ");
+    scanf("%s", grade);
+    totalgradepoints += 3 * gp(grade);
+    creditpoints += 3;
+
+    printf("\nEnter the grade for Object Oriented Programming: ");
+    scanf("%s", grade);
+    totalgradepoints += 3 * gp(grade);
+    creditpoints += 3;
+
+    printf("\nEnter the grade for Operating Systems: ");
+    scanf("%s", grade);
+    totalgradepoints += 4 * gp(grade);
+    creditpoints += 4;
+
+    printf("\nEnter the grade for Data Structure Laboratory: ");
+    scanf("%s", grade);
+    totalgradepoints += 2 * gp(grade);
+    creditpoints += 2;
+
+    printf("\nEnter the grade for Object Oriented Programming Laboratory: ");
+    scanf("%s", grade);
+    totalgradepoints += 2 * gp(grade);
+    creditpoints += 2;
+
+    printf("\nEnter the grade for Data Science Laboratory: ");
+    scanf("%s", grade);
+    totalgradepoints += 2 * gp(grade);
+    creditpoints += 2;
+
+    printf("\nEnter the grade for Quantitative Aptitude and Verbal Reasoning: ");
+    scanf("%s", grade);
+    totalgradepoints += 1 * gp(grade);
+    creditpoints += 1;
+
+    float gpa = (float)totalgradepoints / creditpoints;
+    printf("\nGPA: %.2f", gpa);
+    return gpa;
+}
+
+float sem_4() {
+    int totalgradepoints = 0, creditpoints = 0;
+    char grade[3];
+
+    printf("\nEnter the grade for Software Engineering: ");
+    scanf("%s", grade);
+    totalgradepoints += 3 * gp(grade);
+    creditpoints += 3;
+
+    printf("\nEnter the grade for Design and Analysis of Algorithm: ");
+    scanf("%s", grade);
+    totalgradepoints += 4 * gp(grade);
+    creditpoints += 4;
+
+    printf("\nEnter the grade for Discrete Mathematics: ");
+    scanf("%s", grade);
+    totalgradepoints += 4 * gp(grade);
+    creditpoints += 4;
+
+    printf("\nEnter the grade for Database Management Systems: ");
+    scanf("%s", grade);
+    totalgradepoints += 3 * gp(grade);
+    creditpoints += 3;
+
+    printf("\nEnter the grade for Java Programming: ");
+    scanf("%s", grade);
+    totalgradepoints += 3 * gp(grade);
+    creditpoints += 3;
+
+    printf("\nEnter the grade for Database Management Systems Laboratory: ");
+    scanf("%s", grade);
+    totalgradepoints += 2 * gp(grade);
+    creditpoints += 2;
+
+    printf("\nEnter the grade for Java Programming Laboratory: ");
+    scanf("%s", grade);
+    totalgradepoints += 2 * gp(grade);
+    creditpoints += 2;
+
+    printf("\nEnter the grade for Quantitative Aptitude and Behavioural Skills: ");
+    scanf("%s", grade);
+    totalgradepoints += 1 * gp(grade);
+    creditpoints += 1;
+
+    float gpa = (float)totalgradepoints / creditpoints;
+    printf("\nGPA: %.2f", gpa);
+    return gpa;
+}
+
+float sem_5() {
+    int totalgradepoints = 0, creditpoints = 0;
+    char grade[3];
+
+    printf("\nEnter the grade for Compiler Design: ");
+    scanf("%s", grade);
+    totalgradepoints += 4 * gp(grade);
+    creditpoints += 4;
+
+    printf("\nEnter the grade for Open Elective 1: ");
+    scanf("%s", grade);
+    totalgradepoints += 3 * gp(grade);
+    creditpoints += 3;
+
+    printf("\nEnter the grade for Computer Networks: ");
+    scanf("%s", grade);
+    totalgradepoints += 4 * gp(grade);
+    creditpoints += 4;
+
+    printf("\nEnter the grade for Full Stack Programming: ");
+    scanf("%s", grade);
+    totalgradepoints += 4 * gp(grade);
+    creditpoints += 4;
+
+    printf("\nEnter the grade for Professional Elective 1: ");
+    scanf("%s", grade);
+    totalgradepoints += 3 * gp(grade);
+    creditpoints += 3;
+
+    printf("\nEnter the grade for Professional Elective 2: ");
+    scanf("%s", grade);
+    totalgradepoints += 3 * gp(grade);
+    creditpoints += 3;
+
+    printf("\nEnter the grade for Communicative English Laboratory: ");
+    scanf("%s", grade);
+    totalgradepoints += 1 * gp(grade);
+    creditpoints += 1;
+
+    printf("\nEnter the grade for Quantitative Aptitude and Communication Skill: ");
+    scanf("%s", grade);
+    totalgradepoints += 1 * gp(grade);
+    creditpoints += 1;
+
+    float gpa = (float)totalgradepoints / creditpoints;
+    printf("\nGPA: %.2f", gpa);
+    return gpa;
+}
+
+float sem_6() {
+    int totalgradepoints = 0, creditpoints = 0;
+    char grade[3];
+
+    printf("\nEnter the grade for Mobile Computing: ");
+    scanf("%s", grade);
+    totalgradepoints += 3 * gp(grade);
+    creditpoints += 3;
+
+    printf("\nEnter the grade for Open Elective II: ");
+    scanf("%s", grade);
+    totalgradepoints += 3 * gp(grade);
+    creditpoints += 3;
+
+    printf("\nEnter the grade for Cryptography and Cybersecurity: ");
+    scanf("%s", grade);
+    totalgradepoints += 4 * gp(grade);
+    creditpoints += 4;
+
+    printf("\nEnter the grade for Artificial Intelligence and Machine Learning: ");
+    scanf("%s", grade);
+    totalgradepoints += 4 * gp(grade);
+    creditpoints += 4;
+
+    printf("\nEnter the grade for Professional Elective III: ");
+    scanf("%s", grade);
+    totalgradepoints += 3 * gp(grade);
+    creditpoints += 3;
+
+    printf("\nEnter the grade for Professional Elective IV: ");
+    scanf("%s", grade);
+    totalgradepoints += 3 * gp(grade);
+    creditpoints += 3;
+
+    printf("\nEnter the grade for Mobile Application Development Lab: ");
+    scanf("%s", grade);
+    totalgradepoints += 2 * gp(grade);
+    creditpoints += 2;
+
+    printf("\nEnter the grade for Quantitative Aptitude and Soft Skills: ");
+    scanf("%s", grade);
+    totalgradepoints += 1 * gp(grade);
+    creditpoints += 1;
+
+    float gpa = (float)totalgradepoints / creditpoints;
+    printf("\nGPA: %.2f", gpa);
+    return gpa;
+}
+
+float sem_7() {
+    int totalgradepoints = 0, creditpoints = 0;
+    char grade[3];
+
+    printf("\nEnter the grade for Human Values and Ethics: ");
+    scanf("%s", grade);
+    totalgradepoints += 2 * gp(grade);
+    creditpoints += 2;
+
+    printf("\nEnter the grade for Elective - Management: ");
+    scanf("%s", grade);
+    totalgradepoints += 3 * gp(grade);
+    creditpoints += 3;
+
+    printf("\nEnter the grade for Open Elective III: ");
+    scanf("%s", grade);
+    totalgradepoints += 3 * gp(grade);
+    creditpoints += 3;
+
+    printf("\nEnter the grade for Professional Elective V: ");
+    scanf("%s", grade);
+    totalgradepoints += 3 * gp(grade);
+    creditpoints += 3;
+
+    printf("\nEnter the grade for Professional Elective VI: ");
+    scanf("%s", grade);
+    totalgradepoints += 3 * gp(grade);
+    creditpoints += 3;
+
+    float gpa = (float)totalgradepoints / creditpoints;
+    printf("\nGPA: %.2f", gpa);
+    return gpa;
+}
+
+float sem_8() {
+    int totalgradepoints = 0, creditpoints = 0;
+    char grade[3];
+
+    printf("\nEnter the grade for Project Work: ");
+    scanf("%s", grade);
+    totalgradepoints += 10 * gp(grade);
+    creditpoints += 10;
+
+    float gpa = (float)totalgradepoints / creditpoints;
+    printf("\nGPA: %.2f", gpa);
+    return gpa;
+}
+
+int gp(char g[]) {
+    if (strcmp(g, "O") == 0)
+        return 10;
+    else if (strcmp(g, "A+") == 0)
+        return 9;
+    else if (strcmp(g, "A") == 0)
+        return 8;
+    else if (strcmp(g, "B+") == 0)
+        return 7;
+    else if (strcmp(g, "B") == 0)
+        return 6;
+    else if (strcmp(g, "C") == 0)
+        return 5;
+    else
+        return 0;
+}
